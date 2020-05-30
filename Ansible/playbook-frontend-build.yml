@@ -6,3 +6,6 @@
   tasks:
   - name: build frontend image
     command: docker build -t thibauthumblet/devopsprojectfrontend /home/thumblet/jenkins/workspace/kazoupipe/Frontend
+    
+  - name: publish frontend image dockerhub
+    command: docker push thibauthumblet/devopsprojectfrontend
