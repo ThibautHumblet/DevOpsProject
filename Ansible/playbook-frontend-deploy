@@ -1,0 +1,13 @@
+  
+--- 
+- hosts: all
+  user: root 
+  become: true
+  
+  tasks:
+  - name: Reset containers
+    command: docker container rm -f frontend
+    ignore_errors: yes
+      
+  - name: deploy frontend container
+    command: docker run -d --name frontend -p 8080:8080 thibauthumblet/devopsprojectfrontend
