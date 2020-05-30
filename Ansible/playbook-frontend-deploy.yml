@@ -10,4 +10,4 @@
     ignore_errors: yes
       
   - name: deploy frontend container
-    command: docker run -d --name frontend -p 8080:8080 thibauthumblet/devopsprojectfrontend
+    command: docker run -d --name frontend -p 9090:80 thibauthumblet/devopsprojectfrontend
