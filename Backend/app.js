@@ -1,6 +1,6 @@
 const http = require('http');
 
-const express = require('express');
+const express = require('./node_modules/express');
 const logger = require('./logger');
 const cors = require('cors');
 
