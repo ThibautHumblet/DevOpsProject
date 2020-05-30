@@ -18,6 +18,6 @@ app.use(cors());
     res.end(JSON.stringify({ "msg": "POST request aangekomen!" }));
   });
 
-  const server = http.createServer(app).listen(9000, () => {
-    logger.info("Server is up an listening on http://localhost:9000");
+  const server = http.createServer(app).listen(8080, () => {
+    logger.info("Server is up an listening on http://localhost:8080");
 });
