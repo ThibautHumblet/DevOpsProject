@@ -1,0 +1,9 @@
+--- 
+- hosts: all
+  user: root 
+  become: true
+  
+  tasks:
+  - name: build backend image
+    command: docker build -t thibauthumblet/devopsprojectbackend /home/thumblet/jenkins/workspace/kazoupipe/Backend
+    
