@@ -1,0 +1,8 @@
+--- 
+- hosts: all
+  user: root 
+  become: true
+  
+  tasks:
+  - name: build frontend image
+    command: docker build -t thibauthumblet/devopsprojectfrontend /home/thumblet/jenkins/workspace/kazoupipe/Frontend
