@@ -1,0 +1,8 @@
+--- 
+- hosts: all
+  user: root 
+  become: true
+  
+  tasks:
+  - name: deploy backend container
+    command: docker run -d --name backend -p 8080:8080 thibauthumblet/devopsprojectbackend
