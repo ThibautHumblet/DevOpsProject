@@ -7,3 +7,5 @@
   - name: build backend image
     command: docker build -t thibauthumblet/devopsprojectbackend /home/thumblet/jenkins/workspace/kazoupipe/Backend
     
+  - name: publish backend image dockerhub
+    command: docker push thibauthumblet/devopsprojectbackend
