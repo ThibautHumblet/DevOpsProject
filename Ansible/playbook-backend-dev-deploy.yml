@@ -1,0 +1,12 @@
+--- 
+- hosts: all
+  user: root 
+  become: true
+  
+  tasks:
+  - name: Reset dev containers
+    command: docker container rm -f backenddev
+    ignore_errors: yes
+      
+  - name: deploy backend dev container
+    command: docker run -d --name backenddev -p 8585:8080 thibauthumblet/devopsprojectbackenddev

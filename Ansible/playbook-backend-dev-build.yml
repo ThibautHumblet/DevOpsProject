@@ -1,0 +1,11 @@
+--- 
+- hosts: all
+  user: root 
+  become: true
+  
+  tasks:
+  - name: build backend dev image
+    command: docker build -t thibauthumblet/devopsprojectbackenddev /home/thumblet/jenkins/workspace/kazoudevpipe/Backend
+    
+  - name: publish backend dev image dockerhub
+    command: docker push thibauthumblet/devopsprojectbackenddev
