@@ -17,7 +17,7 @@ export class OpenPlaatsenComponent implements OnInit {
   }
 
   makeRequest(): void {
-    this.http.request('http://localhost:9000/')
+    this.http.request('http://192.168.0.239:9090/')
     .subscribe((res: Response) => {
       this.data = res.json();
       console.log(this.data)
